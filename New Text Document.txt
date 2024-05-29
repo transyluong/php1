@@ -1,0 +1,193 @@
+php không phân biệt chữ hoa chữ thường
+
+tuy nhiên biến phân biệt chữ hoa chữ thường
+
+chú thích : dùng "//" hoặc "#" hoặc "/* */"
+
+biến
+$<Variables name> = <Value> 
+ví dụ $x = 5;
+	$y = "john";
+vd1-------------------------
+<?php
+$txt = "Hanoi";
+echo "I love $txt!";
+?>
+vd2-----------------------
+<?php
+$txt = "Hanoi";
+echo "I love ". $txt ."!";
+?>
+vd3------------------------
+<?php
+$x = 5;
+$y = 4;
+echo $x + $y;
+?>
+
+
+các kiểu số trong php---------------
+Interger
+Float
+Bôlean
+Array
+Object
+NULL
+Resource
+
+
+<?php 
+var_dump(5);
+var_dump("jhon");
+var_dump(3.14);
+var_dump(true);
+var_dump([2,3,56]);
+var_dump(NULL);
+?>
+
+gán nhiều giá trị cho biến------------
+<?php
+$x=$y=$z="Fruit";
+echo $x;
+echo $y;
+echo $z;
+?>
+
+biến------
+local : cục bô
+global : toàn cục
+static : tĩnh 
+
+ví dụ
+<?php
+$x = 5;
+function myTest() {
+	echo "<p>Variable x inside function is: $x<p>";
+}
+myTest();
+echo "<p>Variable x outside function is: $x<p>";
+?>
+------------Thêm từ khóa global để truy cập biến 
+-----------hàm
+strtoupper() chuyển thành chữ hoa
+strtolower() chuyển thành chữ thường
+str_replace() thay thế
+strrev() đảo ngược
+
+
+--------------------SỐ 
+PHP_INT_MAX
+PHP_INT_MIN
+PHP_INT SIZE
+
+is_int()
+is_interger()
+is_long()
+
+
+PHP_FLOAT_MAX
+PHP_FLOAT_MIN
+PHP_FLOAT_DIG
+PHP_FLOAT_EPSILON
+
+is_finite()
+is_infinite()
+
+
+đưa vào một họ tên giới tính tuổi đưa ra lời xin chào
+<18 chào em
+40 anh chị
+40 60 bac
+60 ong ba
+
+tao một mảng gom 1o sinh vien và dung foreach in ra 10 sinh vien đó
+tạo một mảng có thông tin id ten tuoi điểm sau đó in thông tin sinh viên ra màn hình
+
+
+------------------------------------------16-4-2024--------------------------------
+& để và
+
+su dung tham so ... trước tham sô của hàm để truyền vào mảng
+
+sử dụng từ khóa " strict " để bỏ đi hoặc lờ đi một số lỗi ko tương thích
+
+các phương pháp tạo mảng $carsa = array("volvo","BMW","Toyota");
+
+$carb = ["volvo","bmw","toyota"];
+$carc = [
+	"volvo"
+	"toyota"
+	"BMW"
+];
+
+$GLOBLES
+là một mảng chứa tất cả các biến toàn cục
+
+$_SERVER
+$_REQUEST
+là một biến toàn cục mạnh trong php dùng đẻ chứa dữ liệu dùng đẻ supmit của form
+còn là 1 mảng chứa dữ liệu từ post get cookie
+$_POST
+$_GET
+$_FILES
+$_ENV
+$_COOKIE
+$_SESSION
+
+PHP regular ẽpressions
+$exp = "/baoHanoi/i";
+preg_match()
+preg_match_all()
+preg_replace()
+
+get
+post
+
+$_SERVER["PHP_SELF]
+trả về tên tệp tin hiện đang thực thi
+ 
+trim() xóa khoảng trắng ko cần thiết
+stripslashes() bỏ đi dấu gạch ngược
+htmlspecialchars() chuyển kí tự đặc biệt vào html
+
+tên buộc phải có ký tự khoảng trắng
+email bắt buộc à có @và.
+website ko bắt buộc nếu nhập phải có url
+commnet ko bắt buộc
+gender bắt buộc
+
+
+oop----------
+<?php
+$<Object Name> = new <Class Name>();
+?>
+
+tạo một lớp có tiên là product(ID,name,price,amont,company,year)
+thiết kế một form 
+
+
+instanceof kiem tra cos thuoc khong 
+
+__destruct() de huy doi tuong
+
+phạm vi public proteced private
+ 
+ kế thừa dùng "extends" kế thừa dc từ public và proteced
+
+ abstract 
+ các phương thứ ỏ lớp con phải dc định nghĩa giống ở lớp cha là các số lượng các tham số trông phương thức ở lớp con
+ phải giống lớp cha
+ lớp cha ảo phải có tí nhất 1 lớp cha ảo
+ <?php 
+ abstract class ParentClass{
+	abstract public function someMethod1();
+	abstract public function smoneMethod2($name,$color);
+	abstract public function someMethod3(): string;
+ }
+ ?>
+
+
+ connect to SQL
+ dùng mySQLi 
+ <?php 
+ $ser
